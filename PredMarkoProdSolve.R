@@ -49,26 +49,6 @@ target_returns <- 1
 head(TT_split_data_obj$Train)
 test_num_stocks = 50 
 
-######################
-## testing the recursive version 
-#
-
-test_q_recurs_f <- function(n = 5){
-  if(n == 1){
-    return(n)
-  }
-  
-  
-  print("Functon returned")
-  print(test_q_recurs_f(n-1))
-  
-  print("At n = ")
-  ret_val = 0 
-  return( n + test_q_recurs_f(n-1))
-}
-
-print(test_q_recurs_f(n=5))
-
 
 ## Fit pred mark recursive 
 x_test_ls<- recur_pred_marko_ols_wrt_marko_f(
